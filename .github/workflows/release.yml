@@ -1,0 +1,66 @@
+name: PSARC Release
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install pycryptodome docopt
+
+      - name: Validar pasta de origem
+        run: |
+          if [ ! -d "cache" ]; then
+            echo "Pasta cache não encontrada. Crie a pasta cache antes de rodar o workflow."
+            exit 1
+          fi
+
+      - name: Gerar arquivo PSARC
+        run: |
+          python3 psarc.py pack ./cache
+
+      - name: Definir tag da release
+        id: tag
+        run: |
+          TAG_DATE=$(date -u +%Y%m%d-%H%M%S)
+          TAG_HASH=${GITHUB_SHA::7}
+          echo "tag=${TAG_DATE}-${TAG_HASH}" >> "$GITHUB_OUTPUT"
+
+      - name: Publicar release com o PSARC
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: Release ${{ steps.tag.outputs.tag }}
+          body: |
+            ## Build gerado
+
+            ### Arquivo gerado
+            - `cache.psarc`
+
+            ### Build
+            - commit: ${{ github.sha }}
+            - branch: ${{ github.ref_name }}
+          files: |
+            cache.psarc
+          draft: false
+          prerelease: false
