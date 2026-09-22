@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model
+  name="GRLocalizationAsset"
+  id="909862571">
+  <trait
+    value="Active" />
+  <property
+    type="AssetID"
+    name="mCSV"
+    id="3958176526">
+    <set
+      value="" />
+  </property>
+</model>

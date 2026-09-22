@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model
+  name="RSBoot"
+  id="3752496957">
+  <trait
+    value="Active" />
+  <mixin
+    name="GFxMovie"
+    id="3108098437"
+    type="Active; BuiltinModel" />
+  <mixin
+    name="GFxIterable"
+    id="679737762"
+    type="Active" />
+  <property
+    type="String"
+    name="ScaleMode"
+    id="2790962200"
+    source="GFxMovie">
+    <set
+      value="ExactFit" />
+  </property>
+  <property
+    type="AssetID"
+    name="GFxFile"
+    id="1801799887"
+    source="GFxMovie">
+    <set
+      value="urn:application:x-shockwave-flash:IntroSequence" />
+  </property>
+  <property
+    type="EntityRef"
+    name="AlwaysInput"
+    id="4278546442"
+    source="GFxMovie">
+    <set
+      value="00000000-0000-0000-0000-000000000000" />
+  </property>
+  <property
+    type="Boolean"
+    name="Enabled"
+    id="646179308"
+    source="GFxMovie">
+    <set
+      value="True" />
+  </property>
+  <property
+    type="Boolean"
+    name="Paused"
+    id="1959671426"
+    source="GFxMovie">
+    <set
+      value="False" />
+  </property>
+  <property
+    type="UInt32"
+    name="Layer"
+    id="125746633"
+    source="GFxMovie">
+    <set
+      value="255" />
+  </property>
+  <property
+    type="Boolean"
+    name="GFxEdgeAA"
+    id="20873041"
+    source="GFxMovie">
+    <set
+      value="False" />
+  </property>
+  <property
+    type="Boolean"
+    name="InitFirstFrame"
+    id="2543942521"
+    source="GFxMovie">
+    <set
+      value="False" />
+  </property>
+  <property
+    type="Boolean"
+    name="ShowWireframe"
+    id="3675476885"
+    source="GFxMovie">
+    <set
+      value="False" />
+  </property>
+  <property
+    type="EntityRef"
+    name="RenderTarget"
+    id="2884201146"
+    source="GFxMovie">
+    <set
+      value="00000000-0000-0000-0000-000000000000" />
+  </property>
+  <property
+    type="AssocEntityRef"
+    name="RefGameObject"
+    id="1378717537"
+    source="GFxMovie" />
+  <property
+    type="Boolean"
+    name="Is3dUI"
+    id="2563797845"
+    source="GFxMovie">
+    <set
+      value="False" />
+  </property>
+  <property
+    type="String"
+    name="MeshName"
+    id="4030783441"
+    source="GFxMovie">
+    <set
+      value="0" />
+  </property>
+  <property
+    type="Boolean"
+    name="RenderBackground"
+    id="1937831954"
+    source="GFxMovie">
+    <set
+      value="False" />
+  </property>
+  <behavior
+    name="OnGFxFileLoad"
+    id="2711615759"
+    type="Virtual">
+    <trait
+      value="Extends" />
+    <trait
+      value="Immediate" />
+    <invocation-order>
+      <model
+        name="GFxMovie" />
+    </invocation-order>
+  </behavior>
+  <behavior
+    name="InvokeActionscript"
+    id="1806574683"
+    type="Builtin"
+    source="GFxMovie" />
+  <behavior
+    name="SetInputFocus"
+    id="3095769050"
+    type="Builtin"
+    source="GFxMovie" />
+  <behavior
+    name="RemoveInputFocus"
+    id="4010522153"
+    type="Builtin"
+    source="GFxMovie" />
+  <behavior
+    name="SetVariable"
+    id="132101905"
+    type="Builtin"
+    source="GFxMovie" />
+  <behavior
+    name="SetVariableDouble"
+    id="1086930473"
+    type="Builtin"
+    source="GFxMovie" />
+  <behavior
+    name="SetVariableArray"
+    id="3612008138"
+    type="Builtin"
+    source="GFxMovie" />
+  <behavior
+    name="GetVariable"
+    id="132082365"
+    type="Builtin"
+    source="GFxMovie" />
+  <behavior
+    name="GetVariableDouble"
+    id="1152164613"
+    type="Builtin"
+    source="GFxMovie" />
+  <behavior
+    name="OnGFxFileDestroyed"
+    id="1485197359"
+    type="Lua"
+    source="GFxMovie">
+    <trait
+      value="Immediate" />
+  </behavior>
+  <behavior
+    name="OnPropertyUpdate"
+    id="1346494518"
+    type="Virtual">
+    <trait
+      value="Extends" />
+    <trait
+      value="Immediate" />
+    <invocation-order>
+      <model
+        name="GFxIterable" />
+      <model
+        name="GFxMovie" />
+    </invocation-order>
+  </behavior>
+</model>

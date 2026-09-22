@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" ?>
+<InputServiceBindings>
+	<!--Input service bindings: action maps, events and actions-->
+	<!--THIS MAP IS FOR THE WIN32, XBOX360, PS3 PLATFORMS -->
+	<ActionMapsList>
+		<ActionMap ActionMapName="SPARK_DEFAULT_ACTION_MAP">
+			<EventsList>
+				<!--0xC000000000000001-->
+				<Event EventName="SAMPLE" EventCategory="0xC000000000000001" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<!--Flags - InputService.h ActionFlags enum - use individual string values or combined bitmask as an int-->
+						<!--DeviceID - a way to define action for specific controllers-->
+						<!--Modifiers - NiInputKeyboard Modifiers enum-->
+						<!--ActionClsID - (ACTION/DPAD/STICK)-->
+						<!--Semantic - NiAction.h Semantic enum for gpad string values GP_BUTTON_LUP or NiInputKeyboard.h for key value strings KEY_M, etc-->
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_A" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770001-->
+				<Event EventName="SPARK_BUTTON_RDOWN" EventCategory="0xC000000007770001" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RDOWN" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_RETURN" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+        		<!--0xC000000007770002-->
+				<Event EventName="SPARK_BUTTON_RLEFT" EventCategory="0xC000000007770002" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RLEFT" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_F1" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770003-->
+				<Event EventName="SPARK_CHARACTER_CONTROL" EventCategory="0xC000000007770003" EventFlags="RETURN_COORD">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="STICK" StickType="GP_STICK_LEFT"/>
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770004-->
+				<Event EventName="SPARK_CAMERA_CONTROL" EventCategory="0xC000000007770004" EventFlags="RETURN_COORD">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="STICK" StickType="GP_STICK_RIGHT"/>
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770005-->
+				<Event EventName="SPARK_CAMERA_CONTROL_KEYB_FORWARD" EventCategory="0xC000000007770005" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_UP" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_UP" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770006-->
+				<Event EventName="SPARK_CAMERA_CONTROL_KEYB_BACKWARD" EventCategory="0xC000000007770006" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_DOWN" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_DOWN" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770007-->
+				<Event EventName="SPARK_CAMERA_CONTROL_KEYB_LEFT" EventCategory="0xC000000007770007" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_LEFT" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_LEFT" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770008-->
+				<Event EventName="SPARK_CAMERA_CONTROL_KEYB_RIGHT" EventCategory="0xC000000007770008" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_RIGHT" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_RIGHT" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770009-->
+				<Event EventName="SPARK_CHARACTER_CONTROL_KEYB_FORWARD" EventCategory="0xC000000007770009" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_W" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_W" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC00000000777000A-->
+				<Event EventName="SPARK_CHARACTER_CONTROL_KEYB_BACKWARD" EventCategory="0xC00000000777000A" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_S" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_S" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC00000000777000B-->
+				<Event EventName="SPARK_CHARACTER_CONTROL_KEYB_LEFT" EventCategory="0xC00000000777000B" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_A" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_A" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC00000000777000C-->
+				<Event EventName="SPARK_CHARACTER_CONTROL_KEYB_RIGHT" EventCategory="0xC00000000777000C" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_D" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_D" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>(
+				</Event>
+				<!--0xC00000000777000D-->
+				<Event EventName="SPARK_BUTTON_START" EventCategory="0xC00000000777000D" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_START" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_SPACE" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC00000000777000E-->
+				<Event EventName="SPARK_BUTTON_SELECT" EventCategory="0xC00000000777000E" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_SELECT" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_SELECT" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC00000000777000F-->
+				<Event EventName="SPARK_BUTTON_L1" EventCategory="0xC00000000777000F" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_L1" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_L1" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770010-->
+				<Event EventName="SPARK_BUTTON_L2" EventCategory="0xC000000007770010" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_L2" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_L2" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770011-->
+				<Event EventName="SPARK_BUTTON_LRIGHT" EventCategory="0xC000000007770011" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_LRIGHT" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_LRIGHT" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770012-->
+				<Event EventName="SPARK_BUTTON_LUP" EventCategory="0xC000000007770012" EventFlags="RETURN_MAGNITUDE">
+				<ActionsList>
+					<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_LUP" MinRange="-1.000000" MaxRange="1.000000" />
+					<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_LUP" MinRange="-1.000000" MaxRange="1.000000" />
+				</ActionsList>
+				</Event>
+				<!--0xC000000007770013-->
+				<Event EventName="SPARK_BUTTON_LDOWN" EventCategory="0xC000000007770013" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_LDOWN" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_LDOWN" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770014-->
+				<Event EventName="SPARK_BUTTON_R1" EventCategory="0xC000000007770014" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_R1" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770015-->
+				<Event EventName="SPARK_BUTTON_RRIGHT" EventCategory="0xC000000007770015" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RRIGHT" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_ACTIVATE|USE_MODIFIERS" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_F3" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!-- VDB -->
+				<!--0xC000000007770016-->
+				<Event EventName="SPARK_BUTTON_RUP" EventCategory="0xC000000007770016" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+					<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RUP" MinRange="-1.000000" MaxRange="1.000000" />
+					<Action Flags="ON_ACTIVATE|USE_MODIFIERS" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_TAB" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+
+				<!--0xC000000007770017-->
+				<Event EventName="SPARK_BUTTON_R2" EventCategory="0xC000000007770017" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+					<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_R2" MinRange="-1.000000" MaxRange="1.000000" />
+					<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_R2" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770018-->
+				<Event EventName="SPARK_LEFT_STICK_MOVEMENT" EventCategory="0xC000000007770018" EventFlags="RETURN_COORD">
+					<ActionsList>
+					<Action Flags="CONTINUOUS" DeviceID="0" Modifiers="0" ActionClsID="STICK" StickType="GP_STICK_LEFT"/>
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770019-->
+				<Event EventName="SPARK_RIGHT_STICK_MOVEMENT" EventCategory="0xC000000007770019" EventFlags="RETURN_COORD">
+					<ActionsList>
+					<!--<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="STICK" StickType="GP_STICK_RIGHT"/>-->
+					<Action Flags="CONTINUOUS" DeviceID="0" Modifiers="0" ActionClsID="STICK" StickType="GP_STICK_RIGHT"/>
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770020-->
+				<Event EventName="SPARK_LSTICK_BUTTON" EventCategory="0xC000000007770020" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+					<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_A" MinRange="-1.000000" MaxRange="1.000000" />
+					<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_A" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770021-->
+				<Event EventName="SPARK_RSTICK_BUTTON" EventCategory="0xC000000007770021" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+					<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_B" MinRange="-1.000000" MaxRange="1.000000" />
+					<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_B" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770022-->
+				<Event EventName="SPARK_ESC_BUTTON" EventCategory="0xC000000007770022" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+					<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_START" MinRange="-1.000000" MaxRange="1.000000" />
+					<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_SPACE" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770025-->
+				<Event EventName="SPARK_BUTTON_LLEFT" EventCategory="0xC000000007770025" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+					<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_LLEFT" MinRange="-1.000000" MaxRange="1.000000" />
+					<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_LLEFT" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770026-->
+				<Event EventName="SPARK_BUTTON_RDOWN_RELEASE" EventCategory="0xC000000007770026" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+					<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RDOWN" MinRange="-1.000000" MaxRange="1.000000" />
+					<Action Flags="ON_DEACTIVATE|USE_MODIFIERS" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_RETURN" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<!--0xC000000007770027-->
+				<Event EventName="SPARK_BUTTON_START_RELEASE" EventCategory="0xC000000007770027" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+					<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_START" MinRange="-1.000000" MaxRange="1.000000" />
+					<Action Flags="ON_DEACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_SPACE" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<Event EventName="ROCKSMITH_BUTTON_TONE_0" EventCategory="0xC000000007770028" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RLEFT" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_F2" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<Event EventName="ROCKSMITH_BUTTON_TONE_1" EventCategory="0xC000000007770029" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RUP" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_F3" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<Event EventName="ROCKSMITH_BUTTON_TONE_2" EventCategory="0xC000000007770030" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RRIGHT" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_F4" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<Event EventName="ROCKSMITH_BUTTON_TONE_DEFAULT" EventCategory="0xC000000007770031" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RDOWN" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_F1" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				<Event EventName="ROCKSMITH_BUTTON_PAUSE_GAME" EventCategory="0xC000000007770032" EventFlags="RETURN_MAGNITUDE">
+					<ActionsList>
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_START" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_SPACE" MinRange="-1.000000" MaxRange="1.000000" />
+						<Action Flags="ON_ACTIVATE" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_ESCAPE" MinRange="-1.000000" MaxRange="1.000000" />
+					</ActionsList>
+				</Event>
+				
+		      <!--0xC000000007770033-->
+		      <Event EventName="SPARK_P1_BUTTON_RDOWN" EventCategory="0xC000000007770033" EventFlags="RETURN_MAGNITUDE">
+		        <ActionsList>
+		          <Action Flags="ON_ACTIVATE|DEVICE_SPECIFIC" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RDOWN" MinRange="-1.000000" MaxRange="1.000000" />
+		          <Action Flags="ON_ACTIVATE|USE_MODIFIERS" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_RETURN" MinRange="-1.000000" MaxRange="1.000000" />
+		        </ActionsList>
+		      </Event>
+		      <!--0xC000000007770034-->
+		      <Event EventName="SPARK_P2_BUTTON_RDOWN" EventCategory="0xC000000007770034" EventFlags="RETURN_MAGNITUDE">
+		        <ActionsList>
+		          <Action Flags="ON_ACTIVATE|DEVICE_SPECIFIC" DeviceID="1" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RDOWN" MinRange="-1.000000" MaxRange="1.000000" />
+		          <Action Flags="ON_ACTIVATE|USE_MODIFIERS" DeviceID="1" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_F1" MinRange="-1.000000" MaxRange="1.000000" />
+		        </ActionsList>
+		      </Event>
+		      <!--0xC000000007770035-->
+		      <Event EventName="SPARK_P1_BUTTON_EMULATION" EventCategory="0xC000000007770035" EventFlags="RETURN_MAGNITUDE">
+		        <ActionsList>
+		          <Action Flags="ON_ACTIVATE|DEVICE_SPECIFIC" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RUP" MinRange="-1.000000" MaxRange="1.000000" />
+		          <Action Flags="ON_ACTIVATE|USE_MODIFIERS" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_TAB" MinRange="-1.000000" MaxRange="1.000000" />
+		        </ActionsList>
+		      </Event>
+		        <!--0xC000000007770036-->
+		        <Event EventName="SPARK_P2_BUTTON_EMULATION" EventCategory="0xC000000007770036" EventFlags="RETURN_MAGNITUDE">
+		          <ActionsList>
+		            <Action Flags="ON_ACTIVATE|DEVICE_SPECIFIC|" DeviceID="1" Modifiers="0" ActionClsID="ACTION" Semantic="GP_BUTTON_RUP" MinRange="-1.000000" MaxRange="1.000000" />
+		            <Action Flags="ON_ACTIVATE|USE_MODIFIERS" DeviceID="0" Modifiers="0" ActionClsID="ACTION" Semantic="KEY_F2" MinRange="-1.000000" MaxRange="1.000000" />
+		          </ActionsList>
+		        </Event>
+     		 </EventsList>
+		</ActionMap>
+	</ActionMapsList>
+	<GlobalActionMap ActionMapName="Global">
+		<EventsList />
+	</GlobalActionMap>
+</InputServiceBindings>

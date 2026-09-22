@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model
+  name="GFxIterable"
+  id="679737762">
+  <trait
+    value="Active" />
+  <behavior
+    name="OnPropertyUpdate"
+    id="1346494518"
+    type="Lua"
+    source="GFxIterable">
+    <trait
+      value="Extends" />
+    <trait
+      value="Immediate" />
+    <invocation-order>
+      <model
+        name="GFxIterable" />
+    </invocation-order>
+  </behavior>
+</model>
