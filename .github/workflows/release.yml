@@ -37,7 +37,8 @@ jobs:
 
       - name: Gerar arquivo PSARC
         run: |
-          python3 psarc.py pack ./cache
+          ls -la
+          python3 ./psarc.py pack ./cache
 
       - name: Definir tag da release
         id: tag
